@@ -6,113 +6,317 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </head>
-  <div style="margin:5px;">
-    <nav class="navbar navbar-inverse navbar-static-top">
+<div style="margin:5px;">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/form">Form Page</a>
+        </li>
+        <li>
+          <a href="/search">Search Data</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--POLICE ID DROPDOWN-->
   <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/">Login</a>
-      </li>
-      <li>
-        <a href="/form">Form Page</a>
-      </li>
-      <li>
-        <a href="/search">Search Data</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="panel-group">
+      <div>
+        <div class="col-xs-3">
+          <label>Police Department ID</label>
+          <select type="text" class="form-control">
+            <option>Police Department</option>
+          </select>
+        </div>
+        <br>
+      </div>
+    </div>
+    <h2>Police Department Record Entry Form</h2>
+    <!--ARREST BOXES-->
+    <div class="container">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">ARREST</div>
+          <div class="panel-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-8">
+                  <label>Arrest Date</label>
+                  <div>
+                    <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" class="form-control">
+                  </div>
+                  <br>
+                  <div>
+                    <div class="col-xs-3">
+                      <select type="text" class="form-control">
+                        <option>Stop Type</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-2">
+                      <select type="text" class="form-control">
+                        <option>Tests</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-2">
+                      <input placeholder="BAC" type="text" class="form-control">
+                    </div>
+                    <div class="col-xs-3">
+                      <select type="text" class="form-control">
+                        <option>Charges</option>
+                      </select>
+                      <br>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="col-xs-6">
+                      <label>Arrest Address</label>
+                      <input placeholder="Arrest Address" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <label>Offender's Destination</label>
+                    <input placeholder="Offenders Destination" type="text" class="form-control">
+                  </div>
+                </div>
+                <!--Right Side ARREST Panel-->
+                <div class="col-xs-4">
+                  <label>Arrest Time</label>
+                  <div>
+                    <input placeholder="Hour" class="col-xs-3" id="ex1" type="text">
+                    <input placeholder="Minute" class="col-xs-3" id="ex1" type="text">
+                  </div>
+                </div>
+                <div class="col-xs-3">
+                  <label>Other Crime Codes</label>
+                  <input placeholder="Other Crime Codes" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Place of LAST DRINK Panel-->
+    <div class="container">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">PLACE OF LAST DRINK (POLD)</div>
+          <div class="panel-body">
+            <form>
+              <div class="row">
+                <div class="col-xs-6">
+                  <label>Select Location Type</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                    </span>
+                    <select type="text" class="form-control">
+                      <option>Select Location Type</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <label>Search Location Name</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">  
+                    </span>
+                    <input placeholder="Location Name" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--IMPAIRMENT PANEL-->
+    <div class="container">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">IMPAIRMENT / ALCOHOL CONSUMED AT (POLD)</div>
+          <div class="panel-body">
+            <span>
 
-<div class="container-fluid">
-  <div class="text-center">
-    <h1>Target Form</h1>
-   <p></p>
+              <div class="col-xs-1"> 
+                <p>Drinks/per</p>                   
+                <input type="number" class="form-control">
+
+              </div>
+              
+              <div class="col-xs-1">
+                <p>Minutes</p>
+                <input type="number" class="form-control">
+
+              </div>
+              <div class="col-xs-3">
+                <p>Other Substances</p>                    
+                <select type="text" class="form-control">
+                  <option>Select Any</option>
+                </select>
+              </div>
+              <div class="col-xs-4">
+                <p>Describe if other</p>
+                <input type="text" class="form-control">                    
+              </div>
+              
+
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Demographics PANEL-->
+    <div class="container">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">OFFENDER DEMOGRAPHICS</div>
+          <div class="panel-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-3">
+                  <p>Age / Gender</p>
+                  <div>
+                    <span>                             
+                     <input placeholder="Age" class="col-xs-4" id="ex1" type="number">
+                     <input placeholder="Gender" class="col-xs-4" id="ex1" type="text">       
+                   </span>
+                 </div>
+                 <select type="text" class="form-control">
+                  <option>Race / Ethnicity</option>
+                </select>
+              </div>
+              <div class="col-xs-4">
+                <select type="text" class="form-control">
+                  <option>Occupation</option>
+                </select>
+              </div>
+              <div class="col-xs-2">
+                <p>Prior DUI History (if any)</p>
+                <input type="number" placeholder="# of arrests" class="form-control">
+                <br>
+                <input placeholder="Date Last DUI (if any)" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <form class="form-horizontal" role="form">
-    <div class="row">
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="inputEmail" class="col-md-4 control-label">Email:</label>
-          <div class="col-md-8">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="inputPassword" class="col-md-4 control-label">Password:</label>
-          <div class="col-md-8">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="inputLabel3" class="col-md-4 control-label">Label 3:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="inputLabel3" placeholder="Label 3">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="inputLabel4" class="col-md-4 control-label">Label 4:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="inputLabel4" placeholder="Label 4">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input5" class="col-md-4 control-label">1234567890:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input5" placeholder="input 5">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input6" class="col-md-4 control-label">123456789012:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input6" placeholder="input 6">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input7" class="col-md-4 control-label">12345678901234:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input7" placeholder="input 7">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input8" class="col-md-4 control-label">1234567890123456:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input8" placeholder="input 8">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input9" class="col-md-4 control-label">12345678:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input9" placeholder="input 9">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="form-group">
-          <label for="input10" class="col-md-4 control-label">123456:</label>
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="input10" placeholder="input 10">
-          </div>
-        </div>
-      </div>
-    </div><!-- /.row this actually does not appear to be needed with the form-horizontal -->
-  </form>
-  <p>Note: label text will occupy as much space as the text takes regardless of the 
-      column size, so be sure to validate your spacing.
-  </p>
-</div><!-- /.container -->
+  <!--VEHICLE CRASH PANEL-->
+  <div class="container">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">VEHICLE CRASH</div>
+        <div class="panel-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-4">
+                <label>Driver Vehicle</label>
+                <select type="text" class="form-control">
+                  <option>Select Vehicle</option>
+                </select>
+                <br>
+                <div>
+                  <label>Injuries</label>
+                  <select type="text">
+                    <option>Adults</option>
+                  </select>
+                  <select>
+                    <option>Under 21</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Deaths</label>
+                  <select>
+                    <option>Adults</option>
+                  </select>
+                  <select>
+                    <option>Under 21</option>
+                  </select>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">Hit and Run</label>
+                  </div>
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="comment">Details</label>
+                      <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xs-4">
+                  <label>Victim's Vehicle (if any)</label>
+                  <select type="text" class="form-control">
+                    <option>Select Vehicle</option>
+                  </select>
+                  <br>
+                  <div>
+                    <label>Injuries</label>
+                    <select>
+                      <option>Adults</option>
+                    </select>
+                    <select>
+                      <option>Under 21</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Deaths</label>
+                    <select>
+                      <option>Adults</option>
+                    </select>
+                    <select>
+                      <option>Under 21</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <p>- Other Circumstances</p>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">Peace Officer Victim</label>
+                    </div>
+                    <p>- Property Damage</p>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">Public Safety Vehicle</label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">Municipal Property</label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">Tree and Landscape</label>
+                          </div>
+                          <div class="checkbox disabled">
+                            <label>
+                              <input type="checkbox" value="" disabled>Building Structure</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--OTHER NOTES BOX-->
+              <div class="container">
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Other Notes</div>
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--BUTTONS-->
+              <div class="container">
+                <button type="button" class="btn btn-warning">Preview</button>
+                <button type="button" class="btn btn-success">Submit</button>
+              </div>
+              <!--FOOTER-->
